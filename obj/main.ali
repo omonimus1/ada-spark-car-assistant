@@ -6,41 +6,18 @@ A -march=x86-64
 P ZX
 
 RN
-RV NO_ABORT_STATEMENTS
-RV NO_DELAY
-RV NO_ENUMERATION_MAPS
-RV NO_FIXED_POINT
 RV NO_IO
-RV NO_RELATIVE_DELAY
-RV NO_STANDARD_STORAGE_POOLS
-RV NO_TASK_HIERARCHY
-RV NO_TASKING
-RV NO_DEFAULT_INITIALIZATION
-RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
-RV MAX_TASKS=1+
 
-U main%b		main.adb		870fba9a NE OO SU
+U main%b		main.adb		5c6e57f5 NE OO SU
 W ada%s			ada.ads			ada.ali
-Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
-Z ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
-W borst%s		borst.adb		borst.ali
-Z system%s		system.ads		system.ali
-Z system.img_int%s	s-imgint.ads		s-imgint.ali
-Z system.parameters%s	s-parame.adb		s-parame.ali
-Z system.soft_links%s	s-soflin.adb		s-soflin.ali
-Z system.task_info%s	s-tasinf.adb		s-tasinf.ali
-Z system.tasking%s	s-taskin.adb		s-taskin.ali
-Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+W levels%s		levels.adb		levels.ali
 
 D ada.ads		20210520051132 76789da1 ada%s
-D a-calend.ads		20210520051128 474d9720 ada.calendar%s
-D a-caldel.ads		20210520051128 9f20b83d ada.calendar.delays%s
 D a-except.ads		20210520051128 946f3014 ada.exceptions%s
 D a-ioexce.ads		20210520051128 e4a01f64 ada.io_exceptions%s
-D a-reatim.ads		20210520051128 0240fc73 ada.real_time%s
 D a-stream.ads		20210520051130 119b8fb3 ada.streams%s
 D a-string.ads		20210520051130 90ac6797 ada.strings%s
 D a-sttebu.ads		20210520051130 18209c64 ada.strings.text_buffers%s
@@ -48,119 +25,34 @@ D a-stuten.ads		20210520051130 808c40ad ada.strings.utf_encoding%s
 D a-tags.ads		20210520051130 9eaa38c6 ada.tags%s
 D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
-D borst.ads		20220418142248 5cc1fa02 borst%s
 D interfac.ads		20210520051132 edec285f interfaces%s
-D i-c.ads		20210520051132 d9beded9 interfaces.c%s
-D i-cstrin.ads		20210520051132 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D main.adb		20220418142042 753a95f5 main%b
+D levels.ads		20220418173132 ba251a8a levels%s
+D main.adb		20220418173218 48bf9812 main%b
 D system.ads		20210520051136 2ffa5114 system%s
-D s-atacco.ads		20210520051132 4c36d12f system.address_to_access_conversions%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051132 54135002 system.exception_table%s
 D s-ficobl.ads		20210520051132 078245e4 system.file_control_block%s
-D s-imagei.ads		20210520051134 0d3f86a7 system.image_i%s
-D s-imgint.ads		20210520051134 bdb6f5ec system.img_int%s
-D s-multip.ads		20210520051134 38ac9f73 system.multiprocessors%s
-D s-osinte.ads		20210520051128 97504df8 system.os_interface%s
 D s-parame.ads		20210520051134 4752c4cb system.parameters%s
 D s-putima.ads		20210520051134 4e095881 system.put_images%s
 D s-secsta.ads		20210520051134 9b3ab94b system.secondary_stack%s
 D s-soflin.ads		20210520051134 a7318a92 system.soft_links%s
 D s-stache.ads		20210520051134 a37c21ec system.stack_checking%s
-D s-stausa.ads		20210520051134 017a0a05 system.stack_usage%s
 D s-stalib.ads		20210520051134 472fbca8 system.standard_library%s
 D s-stoele.ads		20210520051134 2dc34a04 system.storage_elements%s
 D s-stoele.adb		20210520051134 ed88f8fb system.storage_elements%b
-D s-tasinf.ads		20210520051128 601f6b72 system.task_info%s
-D s-taspri.ads		20210520051128 a1350802 system.task_primitives%s
-D s-taprop.ads		20210520051128 6eefbe12 system.task_primitives.operations%s
-D s-taskin.ads		20210520051128 88fba9ad system.tasking%s
-D s-tassta.ads		20210520051128 cca55c94 system.tasking.stages%s
 D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
 D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
-D s-win32.ads		20210520051136 15ac53fb system.win32%s
 D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z b b [main standard 4 11 none]
-G r c none [main standard 4 11 none] [startengine borst 97 14 none]
-G r c none [main standard 4 11 none] [stopengine borst 104 14 none]
-G r c none [main standard 4 11 none] [removerod borst 80 14 none]
-G r c none [main standard 4 11 none] [addrod borst 71 14 none]
-G r c none [main standard 4 11 none] [addtraincar borst 110 14 none]
-G r c none [main standard 4 11 none] [removetraincar borst 116 14 none]
-G r c none [main standard 4 11 none] [changecarriagetype borst 161 14 none]
-G r c none [main standard 4 11 none] [filltank borst 140 14 none]
-G r c none [main standard 4 11 none] [domaintenance borst 89 14 none]
-G r c none [main standard 4 11 none] [addfreight borst 184 14 none]
-G r c none [main standard 4 11 none] [addpassenger borst 166 14 none]
-G r c none [main standard 4 11 none] [removefreight borst 194 14 none]
-G r c none [main standard 4 11 none] [removepassenger borst 176 14 none]
-G r c none [main standard 4 11 none] [tankl borst 145 14 none]
-G r c none [main standard 4 11 none] [maintl borst 150 14 none]
-G r c none [main standard 4 11 none] [speedl borst 155 14 none]
-G r c none [main standard 4 11 none] [emergencystop borst 130 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 19|2r6 2r23
-X 12 a-textio.ads
-58K13*Text_IO 725e16 19|2w10 2r27
-479U14*Get_Line 19|20s10
-506U14*Put_Line 19|16s7 17s7 19s10 23s13 24s13 26s13 27s13 29s13 30s13 31s13
-. 32s13 33s13 34s13 36s13 37s13 38s13 39s13 40s13 41s13 43s13 44s13 45s13
-. 46s13 48s13 49s13 50s13 51s13 54s19 55s19 57s19 58s19 61s13 62s13 64s13
-. 65s13 67s13 68s13 70s13 71s13 72s13 73s13 76s19 77s19 79s19 80s19 83s13
-. 84s13 85s13 86s13 89s19 90s19 92s19 93s19
-X 14 borst.ads
-1K9*borst 205e10 19|1w6 1r17
-12I9*ControlRod<short_short_integer>
-14I9*Speed<short_integer>
-19n21*FREIGHT{19E9} 19|53r21 75r21 88r21
-19n30*PASSENGER{19E9} 19|56r21 78r21 91r21
-21I9*NumCarriages<short_short_integer>
-22I9*FreightWeight<short_integer>
-23I9*PassengerCount<short_integer>
-26i7*Cars{21I9} 19|46r39 51r39 73r39 86r39
-30i26*Cargo{22I9} 19|55r45 77r45 90r45
-31i28*Voyagers{23I9} 19|58r45 80r45 93r45
-36i7*Rods{12I9} 19|30r44 37r44
-37e7*Powered{16E9} 19|17r38 24r44 27r44
-41e7*MtnLight{18E9} 19|68r44
-42e7*HeatLight{18E9} 19|32r44 39r44
-43e7*WaterLight{18E9} 19|65r44
-47e7*TrainType{19E9} 19|44r34 49r34 52r30 62r34 71r34 74r30 84r34 87r30
-48r7*Generator{35R9} 19|17r28 24r34 27r34 30r34 32r34 37r34 39r34 65r34 68r34
-49r7*Cart{25R9} 19|46r34 51r34 55r40 58r40 73r34 77r40 80r40 86r34 90r40
-. 93r40
-50i7*CurSpeed{14I9} 19|34r34 41r34
-53r4*BorstMobile{46R9} 19|17r16 24r22 27r22 30r22 32r22 34r22 37r22 39r22
-. 41r22 44r22 46r22 49r22 51r22 52r18 55r28 58r28 62r22 65r22 68r22 71r22
-. 73r22 74r18 77r28 80r28 84r22 86r22 87r18 90r28 93r28
-71U14*AddRod 19|35s22
-80U14*RemoveRod 19|28s22
-89U14*DoMaintenance 19|66s22
-97U14*StartEngine 19|22s22
-104U14*StopEngine 19|25s22
-110U14*AddTrainCar 19|42s22
-116U14*RemoveTrainCar 19|47s22
-130U14*EmergencyStop 19|114s10
-140U14*FillTank 19|63s22
-145U14*TankL 19|104s10
-150U14*MaintL 19|105s10
-155U14*SpeedL 19|113s10
-161U14*ChangeCarriageType 19|60s22
-166U14*AddPassenger 19|78s34
-176U14*RemovePassenger 19|91s34
-184U14*AddFreight 19|75s32
-194U14*RemoveFreight 19|88s32
-X 19 main.adb
-4U11*Main 4b11 122l5 122t9
-5a4 Str{string} 20m19 21r15
-6i4 Last{natural} 20m23
-7t9 Start 14b14 99l8 99t13
-8t9 Tank 95r45 101b14 108l8 108t12
-9t9 Safety 95r31 110b14 118l8 118t14
-X 34 s-stausa.ads
-208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
-273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
+16K9*Ada 20e8 14|2r6 2r23
+X 9 a-textio.ads
+58K13*Text_IO 725e16 14|2w10 2r27
+X 13 levels.ads
+1K9*Levels 20e11 14|1w6 1r18
+X 14 main.adb
+4U11*Main 4b11 8l5 8t9
 

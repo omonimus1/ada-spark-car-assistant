@@ -1,0 +1,30 @@
+V "GNAT Lib v2021"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U levels%b		levels.adb		809f9802 NE OO PK
+
+U levels%s		levels.ads		ba251a8a EE NE OO PK
+
+D levels.ads		20220418173132 ba251a8a levels%s
+D levels.adb		20220418172252 3aba8288 levels%b
+D system.ads		20210520051136 2ffa5114 system%s
+G a e
+G c Z s s [engineIP levels 7 9 none]
+G c Z s b [plugin levels 14 14 none]
+X 1 levels.ads
+1K9*Levels 20l5 20e11 2|1b14 12l5 12t11
+5E9*Power 5e27 8r19
+5n19*On{5E9} 17r36 2|7r30
+5n23*Off{5E9} 11r39 16r36
+7R9*Engine 9e14 11r15
+8e7*PowerLevel{5E9} 11m26 16r23 17r23 2|7m16
+11r4*TeslaCar{7R9} 15r27 16r14 17r14 2|7m7
+14U14*plugIn 2|4b14 8l8 8t14
+
