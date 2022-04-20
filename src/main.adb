@@ -1,29 +1,29 @@
 with Levels; use Levels;
 with Ada.Text_IO; use Ada.Text_IO;
+with Ada.Numerics.Float_Random; use Ada.Numerics.Float_Random;
 
 procedure Main is
    Str : String(1..2);
    Last : Natural;
    task Start;
-
-
+   RNG : Generator;
+   X : Float;
    task body Start is
    begin
       Put_Line("Welcome to your Tesla Management system!");
+      Put_Line("Tesla managemnt menu: ");
+      Put_Line("1 => Turn On Engine");
+      Put_Line("2 => Turn off Engine");
+      Put_Line("3 => Load Passenger");
+      Put_Line("4 => Unload Passengers");
+      Put_Line("5 => Speed up ");
+      Put_Line("6 => Slow Down");
+      Put_line("7 => Enable Maintenance Mode");
+      Put_Line("8 => Disable Maintenance Mode");
+      Put_Line("R => Turn Right ");
+      Put_Line("L => Turn Left");
+      Put_Line("Press ANY other key to exit");
       loop
-         Put_Line("Tesla managemnt menu: ");
-         Put_Line("1 - Turn On Engine");
-         Put_Line("2 - Turn off Engine");
-         Put_Line("3 - Load Passenger");
-         Put_Line("4 - Unload Passengers");
-         Put_Line("5 - Speed up ");
-         Put_Line("6 - Slow Down");
-         Put_line("7 - Enable Maintenance Mode");
-         Put_Line("8 - Disable Maintenance Mode");
-         Put_Line("9 - Turn Right ");
-         Put_Line("10- Turn Left");
-         Put_Line("Press ANY other key to exit");
-
          Put_Line("Please enter what you would like to do:");
          Get_Line(Str,Last);
          case Str(1) is
@@ -48,9 +48,27 @@ procedure Main is
             Put_Line("Number of passenger inside the car:");
             Put_Line(TeslaCar.NumberOfPassengers'Image);
          when '5' =>
-            Put_Line("TrainType: ");
+            Put_Line("Check roads contidition before speeding up...");
+            Put_Line("Current speed: ");
+            Put_Line(TeslaCar.CarSpeed'Image);
+            IncreaseSpeed;
+            Put_Line("Current speed: ");
+            Put_Line(TeslaCar.CarSpeed'Image);
+            Put_Line("Battery Degradation level: ");
+            Put_Line(TeslaCar.BatteryDegradationLevel'Image);
+            Put_Line("Battery left: ");
+            Put_Line(TeslaCar.BatteryLevel'Image);
          when '6' =>
-            Put_Line("TrainType: ");
+            Put_Line("Check traffic conditions to slow down...");
+            Put_Line("Current speed: ");
+            Put_Line(TeslaCar.CarSpeed'Image);
+            DecreaseSpeed;
+            Put_Line("Current speed: ");
+            Put_Line(TeslaCar.CarSpeed'Image);
+            Put_Line("Battery Degradation level: ");
+            Put_Line(TeslaCar.BatteryDegradationLevel'Image);
+            Put_Line("Battery left: ");
+            Put_Line(TeslaCar.BatteryLevel'Image);
          when '7' =>
             Put_Line("Enabling diagnostic mode... ");
             EnableDiagosticMode;
@@ -61,12 +79,15 @@ procedure Main is
             DisableDiagosticMode;
             Put_Line("Diagnostic mode:");
             Put_Line(TeslaCar.MaintenanceMode'Image);
-         when '9' =>
-            Put_Line("Maintenance: ");
-         when '+' =>
-            Put_Line("TrainType: ");
-         when '-' =>
-            Put_Line("TrainType: ");
+         when 'R' =>
+            Put_Line("Checking if it possible to turn right...");
+            X := Random(RNG);
+            Put_Line(X'Image);
+            -- if X < 3.49685E-01 then
+            -- Implement probability of object detection
+         when 'L' =>
+            Put_Line("Check if possible to turn left...");
+            -- Implement probability ob object detection
          when others => exit;
          end case;
       end loop;

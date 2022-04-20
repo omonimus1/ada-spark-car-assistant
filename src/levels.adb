@@ -49,8 +49,12 @@ is
    end DecreaseSpeed;
 
 
-
-
+   procedure Turn is
+   begin
+       TeslaCar.CarSpeed := TeslaCar.CarSpeed +5;
+       TeslaCar.BatteryDegradationLevel := TeslaCar.BatteryDegradationLevel + 1;
+       TeslaCar.GearInserted := TeslaCar.GearInserted + 1;
+   end Turn;
 
 
 end Levels;
