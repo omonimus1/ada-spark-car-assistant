@@ -2,31 +2,15 @@
 <Locations >
   <Project>
     <vfs_file />
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 1" line=" 8" >
       <vfs_project>C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_project>
       <vfs_file>C:\Users\david\Desktop\FASE-COUSEWORK\src\main.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_project>
-      <vfs_file>C:\Users\david\Desktop\FASE-COUSEWORK\src\main.adb</vfs_file>
+      <vfs_file>C:\Users\david\Desktop\FASE-COUSEWORK\src\levels.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_project>
-      <vfs_file>C:\Users\david\Desktop\FASE-COUSEWORK\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_project>
-      <vfs_file>C:\Users\david\Desktop\FASE-COUSEWORK\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_project>
-      <vfs_file>C:\Users\david\Desktop\FASE-COUSEWORK\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 23" line=" 5" >
-      <vfs_project>C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_project>
-      <vfs_file>C:\Users\david\Desktop\FASE-COUSEWORK\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 18" line=" 1" >
       <vfs_project>C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_project>
       <vfs_file>C:\Users\david\Desktop\FASE-COUSEWORK\src\main.adb</vfs_file>
     </file_marker>
@@ -34,56 +18,21 @@
       <vfs_project>C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_project>
       <vfs_file>C:\Users\david\Desktop\FASE-COUSEWORK\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 4" line=" 3" >
+    <file_marker column=" 1" line=" 1" >
       <vfs_project>C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_project>
-      <vfs_file>C:\Users\david\Desktop\FASE-COUSEWORK\src\coursework.ads</vfs_file>
+      <vfs_file>C:\Users\david\Desktop\FASE-COUSEWORK\src\borst.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_project>
+      <vfs_file>C:\Users\david\Desktop\FASE-COUSEWORK\src\levels.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_project>
+      <vfs_file>C:\Users\david\Desktop\FASE-COUSEWORK\src\main.adb</vfs_file>
     </file_marker>
     <file_marker current="true" column=" 1" line=" 1" >
       <vfs_project>C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_project>
-      <vfs_file>C:\Users\david\Desktop\FASE-COUSEWORK\src\coursework.ads</vfs_file>
-    </file_marker>
-  </Project>
-  <Project >
-    <vfs_file >C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_file>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project >C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_project>
-      <vfs_file >C:\Users\david\Desktop\FASE-COUSEWORK\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project >C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_project>
-      <vfs_file >C:\Users\david\Desktop\FASE-COUSEWORK\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project >C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_project>
-      <vfs_file >C:\Users\david\Desktop\FASE-COUSEWORK\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project >C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_project>
-      <vfs_file >C:\Users\david\Desktop\FASE-COUSEWORK\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project >C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_project>
-      <vfs_file >C:\Users\david\Desktop\FASE-COUSEWORK\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 44" line=" 5">
-      <vfs_project >C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_project>
-      <vfs_file >C:\Users\david\Desktop\FASE-COUSEWORK\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 18" line=" 1">
-      <vfs_project >C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_project>
-      <vfs_file >C:\Users\david\Desktop\FASE-COUSEWORK\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 8">
-      <vfs_project >C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_project>
-      <vfs_file >C:\Users\david\Desktop\FASE-COUSEWORK\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 3">
-      <vfs_project >C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_project>
-      <vfs_file >C:\Users\david\Desktop\FASE-COUSEWORK\src\coursework.ads</vfs_file>
-    </file_marker>
-    <file_marker current="true" column=" 1" line=" 1">
-      <vfs_project >C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr</vfs_project>
-      <vfs_file >C:\Users\david\Desktop\FASE-COUSEWORK\src\coursework.ads</vfs_file>
+      <vfs_file>C:\Users\david\Desktop\FASE-COUSEWORK\src\borst.ads</vfs_file>
     </file_marker>
   </Project>
 </Locations>

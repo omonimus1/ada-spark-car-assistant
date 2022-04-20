@@ -16,5 +16,8 @@ b__main.ali
 -LC:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/
 -static
 -static-libgcc
+C:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/libgnarl.a
 C:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/libgnat.a
--Wl,--stack=0x2000000
+-Xlinker
+--stack=0x200000,0x1000
+-mthreads

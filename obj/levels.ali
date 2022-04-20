@@ -5,26 +5,76 @@ A -march=x86-64
 P ZX
 
 RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U levels%b		levels.adb		809f9802 NE OO PK
+U levels%b		levels.adb		62787c2c NE OO PK
 
-U levels%s		levels.ads		ba251a8a EE NE OO PK
+U levels%s		levels.ads		0d0f3cb1 EE NE OO PK
 
-D levels.ads		20220418173132 ba251a8a levels%s
-D levels.adb		20220418172252 3aba8288 levels%b
+D levels.ads		20220419162306 0d0f3cb1 levels%s
+D levels.adb		20220419162550 6f77409d levels%b
 D system.ads		20210520051136 2ffa5114 system%s
 G a e
-G c Z s s [engineIP levels 7 9 none]
-G c Z s b [plugin levels 14 14 none]
+G c Z s s [roadruleIP levels 22 9 none]
+G c Z s s [carIP levels 12 9 none]
+G c Z s b [turnengineon levels 38 14 none]
+G c Z s b [turnengineoff levels 43 14 none]
+G c Z s b [addpassenger levels 48 14 none]
+G c Z s b [removepassenger levels 53 14 none]
+G c Z s b [enablediagosticmode levels 58 14 none]
+G c Z s b [disablediagosticmode levels 63 14 none]
+G c Z s s [invariantspeedlimit levels 68 13 none]
+G c Z s s [invariantacceleration levels 72 13 none]
+G c Z s b [increasespeed levels 76 14 none]
+G c Z s s [invariantdeceleration levels 81 13 none]
+G c Z s b [decreasespeed levels 84 14 none]
 X 1 levels.ads
-1K9*Levels 20l5 20e11 2|1b14 12l5 12t11
-5E9*Power 5e27 8r19
-5n19*On{5E9} 17r36 2|7r30
-5n23*Off{5E9} 11r39 16r36
-7R9*Engine 9e14 11r15
-8e7*PowerLevel{5E9} 11m26 16r23 17r23 2|7m16
-11r4*TeslaCar{7R9} 15r27 16r14 17r14 2|7m7
-14U14*plugIn 2|4b14 8l8 8t14
+1K9*Levels 89l5 89e11 2|1b14 56l5 56t11
+3E9*Power 3e27 13r19
+3n19*On{3E9} 41r36 45r36 73r70 2|5r30
+3n23*Off{3E9} 30r36 40r36 46r36 2|10r31
+4I9*Battery<short_short_integer> 14r21
+5I9*BatteryDegradation<short_short_integer> 15r32
+6I9*Speed<short_short_integer> 16r17
+7E9*Maintenance 7e33 18r24
+7n25*On{7E9} 61r41 65r40 2|29r35
+7n29*Off{7E9} 35r41 60r40 66r41 74r78 82r35 2|33r35
+8I9*Passengers<short_short_integer> 19r27
+9I9*Gear<short_short_integer> 17r21
+10I9*MaxSpeed<short_short_integer> 23r19
+12R9*Car 20e14 30r15
+13e7*PowerLevel{3E9} 30m23 40r23 41r23 45r23 46r23 73r57 2|5m16 10m16
+14i7*BatteryLevel{4I9} 31m23 74r25
+15i7*BatteryDegradationLevel{5I9} 32m23 2|16m19 16r55 23m19 23r55 39m19 39r55
+. 48m16 48r52
+16i7*CarSpeed{6I9} 33m23 50r96 55r96 69r17 2|14r92 21r92 37r20 38m19 38r40
+. 46m16 46r37
+17i7*GearInserted{9I9} 34m23 2|40m19 40r44 47m16 47r41
+18e7*MaintenanceMode{7E9} 35m23 60r22 61r23 65r22 66r23 74r60 82r17 2|29m16
+. 33m16
+19i7*NumberOfPassengers{8I9} 36m23 50r22 50r59 51r23 51r59 55r22 55r59 56r23
+. 56r59 73r16 2|14r19 14r55 15m19 15r50 21r19 21r55 22m19 22r50
+22R9*RoadRule 24e14 27r21
+23i7*SpeedLimit{10I9} 28m34
+25a4*Str{string}
+27r4*RoadLimitation{22R9}
+30r4*TeslaCar{12R9} 39r27 40r14 41r14 44r27 45r14 46r14 49r27 50r13 50r50
+. 50r87 51r14 51r50 54r27 55r13 55r50 55r87 56r14 56r50 59r27 60r13 61r14
+. 64r27 65r13 66r14 69r8 73r7 73r48 74r16 74r51 77r27 82r8 85r27 2|5m7 10m7
+. 14r10 14r46 14r83 15m10 15r41 16m10 16r46 21r10 21r46 21r83 22m10 22r41
+. 23m10 23r46 29m7 33m7 37r11 38m10 38r31 39m10 39r46 40m10 40r35 46m7 46r28
+. 47m7 47r32 48m7 48r43
+38U14*TurnEngineOn 2|4b14 6l8 6t20
+43U14*TurnEngineOff 2|9b14 11l8 11t21
+48U14*AddPassenger 2|13b14 18l8 18t20
+53U14*RemovePassenger 2|20b14 25l8 25t23
+58U14*EnableDiagosticMode 2|28b14 30l8 30t27
+63U14*DisableDiagosticMode 2|32b14 34l8 34t28
+68V13*InvariantSpeedLimit{boolean} 78s46 79s45
+72V13*InvariantAcceleration{boolean} 78s15 79s14
+76U14*IncreaseSpeed 2|36b14 42l8 42t21
+81V13*InvariantDeceleration{boolean} 86s16 87s19
+84U14*DecreaseSpeed 2|45b14 49l8 49t21
 
