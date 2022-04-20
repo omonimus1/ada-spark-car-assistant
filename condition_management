@@ -1,0 +1,21 @@
+# How to make the battery goes down:
+* At each loop, if the engine is ON, decrease the battery by its degreadationLevel
+
+
+## Turn right
+
+## Turn left
+
+## Increase speed
+
+## Decrese speed
+
+## GetBatteryStatus
+
+## PlugBatteryCharger
+
+## UnplugBatteryCharger
+
+## TurnEngineOn
+
+## TurnEngineOff
