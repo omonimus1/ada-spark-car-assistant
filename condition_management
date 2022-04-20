@@ -19,29 +19,49 @@ ParkingMode = Off
 ObjectDetetion = Off
 
 ## Increase speed
-Engine = On
-MaintenaceMode = Off
-BatteryLevel > MinimumBatteryLevel
-ParkingMode = Off
-ObjectDetetion = Off
-CarSpeed < SpeedLimit -5
-if Gear == 0 => Gear +1
+if Engine = On
+if MaintenaceMode = Off
+if BatteryLevel > MinimumBatteryLevel
+if ParkingMode = Off
+if ObjectDetetion = Off
+if CarSpeed < SpeedLimit -5
+Gear += 1
+Speed += 5
 
 
 ## Decrese speed
-Engine = On
-MaintenaceMode = Off
-BatteryLevel > MinimumBatteryLevel
-ParkingMode = Off
-ObjectDetetion = Off
+if Engine = On
+if MaintenaceMode = Off
+if BatteryLevel > MinimumBatteryLevel
+if ParkingMode = Off
+if ObjectDetetion = Off
 Gear -= 1
+Speed -=5 
 
 ## GetBatteryStatus
+GetBatteryStatu
 
 ## PlugBatteryCharger
+Engine = Off
+ParkingMode = On
+Gear = 0
 
 ## UnplugBatteryCharger
+Engine = Off
+ParkingMode = On
+Gear = 0
 
 ## TurnEngineOn
+Engine = On
+ParkingMode = On
 
 ## TurnEngineOff
+Engine = off
+ParkingMode = On
+
+## Load Passenger
+Speed = 0
+
+## UnloadPassenger
+Speed = 0
+
