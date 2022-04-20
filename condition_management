@@ -1,5 +1,5 @@
 # How to make the battery goes down:
-* At each loop, if the engine is ON, decrease the battery by its degreadationLevel
+* At each loop, if the engine is ON and then Speed > 0 Battery -= BatteryDegradationLevel decrease the battery by its degreadationLevel
 
 
 ## Turn right
@@ -60,8 +60,12 @@ Engine = off
 ParkingMode = On
 
 ## Load Passenger
-Speed = 0
+if Speed = 0
+passenger +=1
+BatteryDeagradation -=1
 
 ## UnloadPassenger
-Speed = 0
+if Speed = 0
+passenger -=1
+BatteryDeagradation -=1
 
