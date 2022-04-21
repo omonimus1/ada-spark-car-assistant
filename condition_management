@@ -42,22 +42,26 @@ Speed -=5
 GetBatteryStatu
 
 ## PlugBatteryCharger
-Engine = Off
-ParkingMode = On
-Gear = 0
+if Engine = Off
+if ParkingMode = On
+if Gear = 0
+if Speed = 0
+BatteryChargeMode = ON
 
 ## UnplugBatteryCharger
-Engine = Off
-ParkingMode = On
-Gear = 0
+if Engine = Off
+if ParkingMode = On
+if Gear = 0
+if Speed = 0
+BatteryChargeMode = Off
 
 ## TurnEngineOn
+if ParkingMode = On
 Engine = On
-ParkingMode = On
 
 ## TurnEngineOff
+if ParkingMode = On
 Engine = off
-ParkingMode = On
 
 ## Load Passenger
 if Speed = 0
