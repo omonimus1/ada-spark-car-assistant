@@ -73,3 +73,11 @@ if Speed = 0
 passenger -=1
 BatteryDeagradation -=1
 
+## SetParking mode
+ParkingMOde = 0n
+
+## UnsetParking Mode
+ParkingMode = Off
+
+## GetBatteryDegradationLevel
+BatteryDegradationLevel
