@@ -1,5 +1,5 @@
 # How to make the battery goes down:
-* At each loop, if the engine is ON and then Speed > 0 Battery -= BatteryDegradationLevel decrease the battery by its degreadationLevel
+* At each loop, if the engine is ON and then Speed > 0 Battery -= BatteryDegradationLevel decrease the battery by its degradation level
 
 
 ## Turn right
