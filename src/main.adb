@@ -24,6 +24,9 @@ procedure Main is
       Put_Line("L => Turn Left");
       Put_Line("Press ANY other key to exit");
       loop
+         if TeslaCar.PowerLevel = On then
+            TeslaCar.BatteryLevel := TeslaCar.BatteryLevel - 1; -- Todo: Fix with Battery degradation Level
+         end if;
          Put_Line("Please enter what you would like to do:");
          Get_Line(Str,Last);
          case Str(1) is

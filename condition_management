@@ -10,6 +10,13 @@ BatteryLevel > MinimumBatteryLevel
 ParkingMode = Off
 ObjectDetetion = Off
 
+
+Pre=> TeslaCar.PowerLevel = On and then TeslaCar.BatteryLevel > 0 and then TeslaCar.GearInserted >=1
+and then TeslaCar.NumberOfPassengers >=1 and then TeslaCar.ObjectDetected = Off and then TeslaCar.MaintenanceMode = Off,
+Post => TeslaCar.PowerLevel = On and then TeslaCar.BatteryLevel > 0 and then TeslaCar.GearInserted >=1
+and then TeslaCar.NumberOfPassengers >=1 and then TeslaCar.ObjectDetected = Off and then TeslaCar.MaintenanceMode = Off;
+
+
 ## Turn left
 Engine = On
 Gear >= 1

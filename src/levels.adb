@@ -2,25 +2,46 @@ package body Levels with SPARK_Mode
 
 is
    procedure TurnEngineOn is begin
-      TeslaCar.PowerLevel := On;
+      if TeslaCar.PowerLevel = Off then
+         TeslaCar.PowerLevel := On;
+         TeslaCar.BatteryDegradationLevel := TeslaCar.BatteryDegradationLevel +1;
+      end if;
    end TurnEngineOn;
 
 
    procedure TurnEngineOff is begin
-      TeslaCar.PowerLevel :=  Off;
-   end TurnEngineOff;
+      if TeslaCar.PowerLevel = On then
+         TeslaCar.PowerLevel :=  Off;
+         TeslaCar.BatteryDegradationLevel := 0;
+      end if;
+      end TurnEngineOff;
+
+   procedure SetParkingMode is begin
+      if TeslaCar.CarSpeed = 0
+         and TeslaCar.Parking = Off and TeslaCar.GearInserted = 0 then
+            TeslaCar.Parking := On;
+      end if;
+         end SetParkingMode;
+
+   procedure UnsetParkingMode is begin
+            if TeslaCar.CarSpeed = 0
+              and TeslaCar.Parking = On and TeslaCar.GearInserted = 0 then
+               TeslaCar.Parking := Off;
+      end if;
+      end UnsetParkingMode;
 
    procedure AddPassenger is begin
-      if TeslaCar.NumberOfPassengers >=0 and TeslaCar.NumberOfPassengers <= 5 and TeslaCar.CarSpeed = 0 then
-         TeslaCar.NumberOfPassengers := TeslaCar.NumberOfPassengers + 1;
-         TeslaCar.BatteryDegradationLevel := TeslaCar.BatteryDegradationLevel +1;
-      end if;
+       if TeslaCar.NumberOfPassengers >=0
+          and TeslaCar.NumberOfPassengers <= 5
+          and TeslaCar.CarSpeed = 0 then
+            TeslaCar.NumberOfPassengers := TeslaCar.NumberOfPassengers + 1;
+            TeslaCar.BatteryDegradationLevel := TeslaCar.BatteryDegradationLevel +1;
+       end if;
    end AddPassenger;
 
    procedure RemovePassenger is begin
-      if TeslaCar.NumberOfPassengers >=1 and TeslaCar.NumberOfPassengers <= 5 and TeslaCar.CarSpeed = 0 then
-         TeslaCar.NumberOfPassengers := TeslaCar.NumberOfPassengers -1 ;
-         TeslaCar.BatteryDegradationLevel := TeslaCar.BatteryDegradationLevel -1;
+               if TeslaCar.NumberOfPassengers >=1 and TeslaCar.NumberOfPassengers <= 5 and TeslaCar.CarSpeed = 0 then
+                  TeslaCar.BatteryDegradationLevel := TeslaCar.BatteryDegradationLevel -1;
       end if;
    end RemovePassenger;
 
@@ -30,7 +51,9 @@ is
    end EnableDiagosticMode;
 
    procedure DisableDiagosticMode is begin
-      TeslaCar.MaintenanceMode := Off;
+               if TeslaCar.MaintenanceMode = On then
+                  TeslaCar.MaintenanceMode := Off;
+                  end if;
    end DisableDiagosticMode;
 
    procedure IncreaseSpeed is begin

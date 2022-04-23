@@ -9,6 +9,8 @@ is
    type Gear is range -1..5;
    type MaxSpeed is range 30..30;
    type Object is (On, Off);
+   type MinimumBatteryLevel is range 0..100;
+   type ParkingMode is (On, Off);
 
    type Car is record
       PowerLevel: Power;
@@ -19,6 +21,8 @@ is
       MaintenanceMode: Maintenance;
       NumberOfPassengers: Passengers;
       ObjectDetected: Object;
+      MinimumBattery : MinimumBatteryLevel;
+      Parking: ParkingMode;
    end record;
 
    type RoadRule is record
@@ -30,12 +34,14 @@ is
                                  SpeedLimit=> 30);
 
    TeslaCar : Car := (PowerLevel=> Off,
-                      BatteryLevel=>0,
+                      BatteryLevel=>100,
                       BatteryDegradationLevel=>0,
                       CarSpeed=>0,
                       GearInserted=>0,
                       MaintenanceMode=> Off,
                       ObjectDetected=>Off,
+                      MinimumBattery => 5,
+                      Parking => On,
                       NumberOfPassengers=> 0);
 
    procedure TurnEngineOn with
@@ -47,6 +53,16 @@ is
      Global => (In_Out => TeslaCar),
      Pre => (TeslaCar.PowerLevel = On),
      Post => TeslaCar.PowerLevel = Off;
+
+   procedure UnsetParkingMode with
+     Global => (In_Out => TeslaCar),
+     Pre => (TeslaCar.Parking = On  and TeslaCar.CarSpeed = 0 and TeslaCar.GearInserted = 0),
+     Post => TeslaCar.Parking = Off and TeslaCar.CarSpeed = 0 and TeslaCar.GearInserted = 0;
+
+   procedure SetParkingMode with
+     Global => (In_Out => TeslaCar),
+     Pre => (TeslaCar.Parking = Off and TeslaCar.CarSpeed = 0 and TeslaCar.GearInserted = 0),
+     Post => TeslaCar.Parking = On and TeslaCar.CarSpeed = 0 and TeslaCar.GearInserted = 0;
 
    procedure AddPassenger with
      Global => (In_Out => TeslaCar),
@@ -78,8 +94,8 @@ is
 
    procedure IncreaseSpeed with
      Global => (In_Out => TeslaCar),
-     Pre => InvariantAcceleration and then InvariantSpeedLimit,
-     Post => InvariantAcceleration and then InvariantSpeedLimit;
+     Pre => InvariantAcceleration and InvariantSpeedLimit,
+     Post => InvariantAcceleration and  InvariantSpeedLimit;
 
    function InvariantDeceleration return Boolean is
       (TeslaCar.MaintenanceMode = Off);
@@ -91,10 +107,10 @@ is
 
    procedure Turn with
      Global => (In_Out => TeslaCar),
-     Pre=> TeslaCar.PowerLevel = On and then TeslaCar.BatteryLevel > 0 and then TeslaCar.GearInserted >=1
-     and then TeslaCar.NumberOfPassengers >=1 and then TeslaCar.ObjectDetected = Off and then TeslaCar.MaintenanceMode = Off,
-     Post => TeslaCar.PowerLevel = On and then TeslaCar.BatteryLevel > 0 and then TeslaCar.GearInserted >=1
-     and then TeslaCar.NumberOfPassengers >=1 and then TeslaCar.ObjectDetected = Off and then TeslaCar.MaintenanceMode = Off;
+     Pre=> TeslaCar.PowerLevel = On and  TeslaCar.BatteryLevel > 0 and TeslaCar.GearInserted >=1
+     and TeslaCar.NumberOfPassengers >=1 and TeslaCar.ObjectDetected = Off and  TeslaCar.MaintenanceMode = Off,
+     Post => TeslaCar.PowerLevel = On and  TeslaCar.BatteryLevel > 0 and TeslaCar.GearInserted >=1
+     and  TeslaCar.NumberOfPassengers >=1 and  TeslaCar.ObjectDetected = Off and  TeslaCar.MaintenanceMode = Off;
 
 
 

@@ -20,7 +20,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV MAX_TASKS=1+
 
-U main%b		main.adb		49e480d8 NE OO SU
+U main%b		main.adb		1ebe89e8 NE OO SU
 W ada%s			ada.ads			ada.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
@@ -57,8 +57,8 @@ D interfac.ads		20210520051132 edec285f interfaces%s
 D i-c.ads		20210520051132 d9beded9 interfaces.c%s
 D i-cstrin.ads		20210520051132 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D levels.ads		20220420123710 a51b5139 levels%s
-D main.adb		20220420123120 025daff6 main%b
+D levels.ads		20220423230826 55b5439c levels%s
+D main.adb		20220423215634 a5a9b463 main%b
 D system.ads		20210520051136 2ffa5114 system%s
 D s-atacco.ads		20210520051132 4c36d12f system.address_to_access_conversions%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
@@ -95,14 +95,14 @@ D s-win32.ads		20210520051136 15ac53fb system.win32%s
 D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z b b [main standard 5 11 none]
-G r c none [main standard 5 11 none] [turnengineon levels 41 14 none]
-G r c none [main standard 5 11 none] [turnengineoff levels 46 14 none]
-G r c none [main standard 5 11 none] [addpassenger levels 51 14 none]
-G r c none [main standard 5 11 none] [removepassenger levels 56 14 none]
-G r c none [main standard 5 11 none] [increasespeed levels 79 14 none]
-G r c none [main standard 5 11 none] [decreasespeed levels 87 14 none]
-G r c none [main standard 5 11 none] [enablediagosticmode levels 61 14 none]
-G r c none [main standard 5 11 none] [disablediagosticmode levels 66 14 none]
+G r c none [main standard 5 11 none] [turnengineon levels 47 14 none]
+G r c none [main standard 5 11 none] [turnengineoff levels 52 14 none]
+G r c none [main standard 5 11 none] [addpassenger levels 67 14 none]
+G r c none [main standard 5 11 none] [removepassenger levels 72 14 none]
+G r c none [main standard 5 11 none] [increasespeed levels 95 14 none]
+G r c none [main standard 5 11 none] [decreasespeed levels 103 14 none]
+G r c none [main standard 5 11 none] [enablediagosticmode levels 77 14 none]
+G r c none [main standard 5 11 none] [disablediagosticmode levels 82 14 none]
 X 1 ada.ads
 16K9*Ada 20e8 21|2r6 2r23 3r6 3r37
 X 6 a-numeri.ads
@@ -111,44 +111,45 @@ X 7 a-nuflra.ads
 41K22*Float_Random 74e30 21|3w19 3r50
 47R9*Generator<38|65R9> 21|9r10
 49F12*Uniformly_Distributed{float}
-51V13*Random{49F12}<38|73p13> 21|84s18
+51V13*Random{49F12}<38|73p13> 21|87s18
 X 14 a-textio.ads
 58K13*Text_IO 725e16 21|2w10 2r27
-479U14*Get_Line 21|28s10
+479U14*Get_Line 21|31s10
 506U14*Put_Line 21|13s7 14s7 15s7 16s7 17s7 18s7 19s7 20s7 21s7 22s7 23s7
-. 24s7 25s7 27s10 31s13 33s13 34s13 36s13 38s13 39s13 41s13 43s13 44s13 46s13
-. 48s13 49s13 51s13 52s13 53s13 55s13 56s13 57s13 58s13 59s13 60s13 62s13
-. 63s13 64s13 66s13 67s13 68s13 69s13 70s13 71s13 73s13 75s13 76s13 78s13
-. 80s13 81s13 83s13 85s13 89s13
+. 24s7 25s7 30s10 34s13 36s13 37s13 39s13 41s13 42s13 44s13 46s13 47s13 49s13
+. 51s13 52s13 54s13 55s13 56s13 58s13 59s13 60s13 61s13 62s13 63s13 65s13
+. 66s13 67s13 69s13 70s13 71s13 72s13 73s13 74s13 76s13 78s13 79s13 81s13
+. 83s13 84s13 86s13 88s13 92s13
 X 20 levels.ads
-1K9*Levels 101e11 21|1w6 1r18
+1K9*Levels 117e11 21|1w6 1r18
+3n19*On{3E9} 21|27r35
 4I9*Battery<short_short_integer>
 5I9*BatteryDegradation<short_short_integer>
 6I9*Speed<short_short_integer>
 8I9*Passengers<short_short_integer>
-14e7*PowerLevel{3E9} 21|34r31 39r31
-15i7*BatteryLevel{4I9} 21|60r31 71r31
-16i7*BatteryDegradationLevel{5I9} 21|58r31 69r31
-17i7*CarSpeed{6I9} 21|53r31 56r31 64r31 67r31
-19e7*MaintenanceMode{7E9} 21|76r31 81r31
-20i7*NumberOfPassengers{8I9} 21|44r31 49r31
-32r4*TeslaCar{13R9} 21|34r22 39r22 44r22 49r22 53r22 56r22 58r22 60r22 64r22
-. 67r22 69r22 71r22 76r22 81r22
-41U14*TurnEngineOn 21|32s13
-46U14*TurnEngineOff 21|37s13
-51U14*AddPassenger 21|42s13
-56U14*RemovePassenger 21|47s13
-61U14*EnableDiagosticMode 21|74s13
-66U14*DisableDiagosticMode 21|79s13
-79U14*IncreaseSpeed 21|54s13
-87U14*DecreaseSpeed 21|65s13
+16e7*PowerLevel{3E9} 21|27r22 37r31 42r31
+17i7*BatteryLevel{4I9} 21|28m22 28r47 63r31 74r31
+18i7*BatteryDegradationLevel{5I9} 21|61r31 72r31
+19i7*CarSpeed{6I9} 21|56r31 59r31 67r31 70r31
+21e7*MaintenanceMode{7E9} 21|79r31 84r31
+22i7*NumberOfPassengers{8I9} 21|47r31 52r31
+36r4*TeslaCar{15R9} 21|27r13 28m13 28r38 37r22 42r22 47r22 52r22 56r22 59r22
+. 61r22 63r22 67r22 70r22 72r22 74r22 79r22 84r22
+47U14*TurnEngineOn 21|35s13
+52U14*TurnEngineOff 21|40s13
+67U14*AddPassenger 21|45s13
+72U14*RemovePassenger 21|50s13
+77U14*EnableDiagosticMode 21|77s13
+82U14*DisableDiagosticMode 21|82s13
+95U14*IncreaseSpeed 21|57s13
+103U14*DecreaseSpeed 21|68s13
 X 21 main.adb
-5U11*Main 5b11 100l5 100t9
-6a4 Str{string} 28m19 29r15
-7i4 Last{natural} 28m23
-8t9 Start 11b14 95l8 95t13
-9r4 RNG{7|47R9} 84r25
-10f4 X{float} 84m13 85r22
+5U11*Main 5b11 103l5 103t9
+6a4 Str{string} 31m19 32r15
+7i4 Last{natural} 31m23
+8t9 Start 11b14 98l8 98t13
+9r4 RNG{7|47R9} 87r25
+10f4 X{float} 87m13 88r22
 X 42 s-stausa.ads
 208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
 273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
