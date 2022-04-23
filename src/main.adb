@@ -20,6 +20,7 @@ procedure Main is
       Put_Line("6 => Slow Down");
       Put_line("7 => Enable Maintenance Mode");
       Put_Line("8 => Disable Maintenance Mode");
+      Put_Line("P => Enable / Disable Parking Mode");
       Put_Line("R => Turn Right ");
       Put_Line("L => Turn Left");
       Put_Line("Press ANY other key to exit");
@@ -91,6 +92,17 @@ procedure Main is
          when 'L' =>
             Put_Line("Check if possible to turn left...");
             -- Implement probability ob object detection
+         when 'P' =>
+            Put("Current Parking mode status: ");
+            Put_Line(TeslaCar.Parking'Image);
+            if TeslaCar.Parking = On then
+               UnsetParkingmode;
+            else
+               SetParkingMode;
+            Put("Current Parking mode status: ");
+               Put_Line(TeslaCar.Parking'Image);
+            end if;
+
          when others => exit;
          end case;
       end loop;
