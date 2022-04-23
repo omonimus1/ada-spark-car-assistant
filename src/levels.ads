@@ -90,20 +90,20 @@ is
 
    function InvariantAcceleration return Boolean is
      (TeslaCar.NumberOfPassengers >=1 and then TeslaCar.PowerLevel = On
-      and then TeslaCar.BatteryLevel > 0 and then TeslaCar.MaintenanceMode = Off);
+      and then TeslaCar.BatteryLevel > 5 and then TeslaCar.MaintenanceMode = Off and then TeslaCar.Parking = Off);
 
    procedure IncreaseSpeed with
      Global => (In_Out => TeslaCar),
-     Pre => InvariantAcceleration and InvariantSpeedLimit,
-     Post => InvariantAcceleration and  InvariantSpeedLimit;
+     Pre => InvariantAcceleration,
+     Post => InvariantAcceleration and  TeslaCar.GearInserted > 0;
 
    function InvariantDeceleration return Boolean is
       (TeslaCar.MaintenanceMode = Off);
 
    procedure DecreaseSpeed with
      Global => (In_Out => TeslaCar),
-     Pre => InvariantDeceleration,
-     Post => InvariantDeceleration;
+     Pre => TeslaCar.Parking = Off,
+     Post => TeslaCar.Parking = Off;
 
    procedure Turn with
      Global => (In_Out => TeslaCar),
