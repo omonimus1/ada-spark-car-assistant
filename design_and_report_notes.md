@@ -14,4 +14,34 @@ The system was developed using the following rules that were provided by the pro
 7. The car must have a diagostic mode with renderes it incapable of any other operator.
 
 
+### Controller structure
+
+### Description
+
+
+### Extentiosn 
+
+A part from the minimum project requirements given by the coursework specifications, a second set of requirements has been implemented.
+The following set of extensions has been implemented:
+* **Menu Management**
+
+The access to each interaction with the car a menu has been made available and accessible to each user. The user  will be able to print at any time with the menu, register passenger numbers, which will impact during the car' assistance emulation.
+The user will also able at any time to access car's information like:
+1. Car speed
+2. Number of passenger
+3. Battery level
+4. Battery degradation level
+
+* **Battery Degradation Level**
+While the engine is running, there is a minimum of battery degradation level. 
+This degradation level may increase or decrease in according to the number of passengers and car speed. 
+
+* **Passengers Management**
+Is it possible to add or remove passengers inside the car, Just when the car has 
+speed 0. As each passenger adds weights inside the car, the battery degration increase, decrease by conseguence the battery charge life-time. 
+
+* **Car's info system**
+Allows anytime to 
+
+
 
