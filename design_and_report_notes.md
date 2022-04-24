@@ -41,7 +41,16 @@ Is it possible to add or remove passengers inside the car, Just when the car has
 speed 0. As each passenger adds weights inside the car, the battery degration increase, decrease by conseguence the battery charge life-time. 
 
 * **Car's info system**
-Allows anytime to 
+Allows anytime to provide information related to:
+1. Car speed
+2. Battery level
+3. Battery degradation level
+4. Number of passeners
+5. Engine status
+6. Current Gear inserted
+7. Parking mode insered
+8. Maintenance status
+
 
 
 
