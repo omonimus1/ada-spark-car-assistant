@@ -12,6 +12,7 @@ procedure Main is
    begin
       Put_Line("Welcome to your Tesla Management system!");
       Put_Line("Tesla managemnt menu: ");
+      Put_Line("Command => Description");
       Put_Line("1 => Turn On Engine");
       Put_Line("2 => Turn off Engine");
       Put_Line("3 => Load Passenger");
@@ -20,9 +21,12 @@ procedure Main is
       Put_Line("6 => Slow Down");
       Put_line("7 => Enable Maintenance Mode");
       Put_Line("8 => Disable Maintenance Mode");
+      Put_Line("B => Get Battery status");
+      Put_Line("D => Get Battery decration Level");
       Put_Line("P => Enable / Disable Parking Mode");
       Put_Line("R => Turn Right ");
       Put_Line("L => Turn Left");
+      Put_Line("M => Print again commands menu");
       Put_Line("Press ANY other key to exit");
       loop
          if TeslaCar.PowerLevel = On then
@@ -102,7 +106,32 @@ procedure Main is
             Put("Current Parking mode status: ");
                Put_Line(TeslaCar.Parking'Image);
             end if;
-
+         when 'M' =>
+            Put_Line("Welcome to your Tesla Management system!");
+            Put_Line("Tesla managemnt menu: ");
+            Put_Line("Command => Description");
+            Put_Line("1 => Turn On Engine");
+            Put_Line("2 => Turn off Engine");
+            Put_Line("3 => Load Passenger");
+            Put_Line("4 => Unload Passengers");
+            Put_Line("5 => Speed up ");
+            Put_Line("6 => Slow Down");
+            Put_line("7 => Enable Maintenance Mode");
+            Put_Line("8 => Disable Maintenance Mode");
+            Put_Line("B => Get Battery status");
+            Put_Line("D => Get Battery decration Level");
+            Put_Line("P => Enable / Disable Parking Mode");
+            Put_Line("R => Turn Right ");
+            Put_Line("L => Turn Left");
+            Put_Line("M => Print again commands menu");
+            Put_Line("Press ANY other key to exit");
+         when 'B' =>
+            Put("Battery level: ");
+            Put_Line(TeslaCar.BatteryLevel'Image);
+         when 'D' =>
+            Put("Battery degration Level: ");
+            Put_Line(TeslaCar.BatteryDegradationLevel'Image);
+            Put_Line("Mind that degration level may change in according to car load and speed");
          when others => exit;
          end case;
       end loop;
