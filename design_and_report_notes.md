@@ -1,22 +1,17 @@
-https://learn.adacore.com/courses/intro-to-ada/chapters/imperative_language.html#imperative-language-if-then-else
+## Report
 
-The first thing to understand is what the files:
-* Borst.ads and borst.adb are used for, and if they are useful to improve sparks levels.
+### Introduction 
+
+In the next paragraph it will be described the design and development of a prototype version of 
+a car driver' assistance using ADA Spark. 
+The system was developed using the following rules that were provided by the project specification:
+1. The car cannot be turned on unless it is in Parked.
+2. The car cannot be driven unless there is a minimum charge in the battery.
+3. Once in motion, the system will warn of low charge.
+4. The speed limit can never be exceeded.
+5. The speed of the car must be zero in order to change gear.
+6. If the car's sensor detect an object, then the car cannot move towards that object.
+7. The car must have a diagostic mode with renderes it incapable of any other operator.
 
 
-In terms of overall functioning, we need to use the following car paramters
-* gear (which is an integer (0 indicated in parking, and -1 means retro).
-* engineTemperature: int -> from zero to 2000
-* turningDirection : Str (left or right)
-* batteryCharge: int (from 0 to 100)
-* CarMode: str (operational  / diagnostic) : if in diagostic, the car cannot execute any action, and must be stopped.
-* objectLocation : str (right or left): if detected, and car cannot proceed towards that direction. 
-* 
 
-
-****** Extension for full marks in the report******
-In the report and code, to gain fully marks, we need to:
-1. Adds new functionalities to the coursework
-2. Demostrate correctness of formal part of the system.
-
-For the 
