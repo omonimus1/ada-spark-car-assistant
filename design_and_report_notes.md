@@ -16,6 +16,14 @@ The system was developed using the following rules that were provided by the pro
 
 ## Controller structure
 
+The car'assistance prototype implemented has been made thinking about a tesla
+Car, a car powered by electric powered with higher performances and integrated driver' assistance.
+
+The the following variables has been used to implement the given prototype:
+(here add a table of the variables)
+
+
+
 The car'assistance controller is developed into three core files:
 * levels.ads
 * levels.adb
@@ -26,6 +34,10 @@ The main file is the core file that gets runned when the ada spark project is bu
 body task that gets executed when the project is build. Within the body task it has been implement a loop used for the management and testing of the car driving assistance.
 
 At each iteration, the program checks if the engine is on and currnet number of passengers. In according to the graduation level, if the engine is running, the battery charge decreases.
+Also at each iteration, until the user does not click type any non-supported key to stop the application, the system will be in hold, wating for user instructions.
+
+
+
 
 ## Description
 
