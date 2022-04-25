@@ -22,6 +22,18 @@ Car, a car powered by electric powered with higher performances and integrated d
 The the following variables has been used to implement the given prototype:
 (here add a table of the variables)
 
+Variable Name   - Value Domain  - Description 
+PowerLevel        (On, Off)
+BatteryLevel      range 0..100
+BatteryDegradationlevel range 0..100
+CarSpeed            range 0..100
+GearInserted         range -1..5
+MaintenaceMode        (On, Off)
+NumberOfPassengers    range 0..5
+ObjectDected          (on, Off)
+MinimumBattery        range(0..100)
+Parking               (On, Off)
+SpeedLimit            range(0..100)
 
 
 The car'assistance controller is developed into three core files:
