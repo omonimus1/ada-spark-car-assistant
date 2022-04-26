@@ -123,15 +123,15 @@ The precondition is that Parking is Off, Car speed is zero (0), and the gear ins
 The post-condition is that Parking is On, Car speed is zero (0), and the gear inserted is 0 (also consiered as neutral).
 
 ###  AddPassenger  (Spark gold
-This procedure allows to 
-The precondition is that
-The post-condition is that 
+This procedure allows the car' assistance to add a passenger,  being aware of the number of passengers on board, and manage the battery degradation level in according to speed and number of passengers. Our car can actually allow max 5 passengers. 
+The precondition is that Car speed is 0 (so the car is stopped), and Number of passenger is >=0 and <=4; 
+The post-condition is that  Car speed is 0 (so the car is stopped), and Number of passenger is >=0 and <=5;
 
 
 ###  RemovePasenger  (Spark gold)
-This procedure allows to 
-The precondition is that
-The post-condition is that 
+This procedure allows the car' assistance to remove a passenger, being so aware of the number of passengers on board, and manage the battery degradation level in according to speed and number of passengers. Our car can actually allow max 5 passengers. 
+The precondition is that Car speed is 0 (so the car is stopped), and Number of passenger is >=0 and <=5; 
+The post-condition is that  Car speed is 0 (so the car is stopped), and Number of passenger is >=0 and <5;
 
 ###  EnableDiagosticMode  (Spark gold)
 This procedure allows to enable diagostic mode, a car configuration will not allow the car to do any operation, expect to print car's diagostic information (like battery level, gear inserted, degradation status). 
