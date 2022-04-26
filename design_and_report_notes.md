@@ -122,6 +122,25 @@ This procudere allows to set the parking mode, a car configuration needed to ena
 The precondition is that Parking is Off, Car speed is zero (0), and the gear inserted is 0 (also consiered as neutral).
 The post-condition is that Parking is On, Car speed is zero (0), and the gear inserted is 0 (also consiered as neutral).
 
+###  AddPassenger  (Spark gold)
+
+
+###  RemovePasenger  (Spark gold)
+
+###  EnableDiagosticMode  (Spark gold)
+
+###  DisableDiagnosticMode  (Spark gold)
+
+
+###  IncreaseSpeed  (Spark gold)
+
+###  DecreaseSpeed  (Spark gold)
+
+###  Turn  (Spark gold)
+
+
+
+
 
 
 
