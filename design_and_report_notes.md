@@ -134,15 +134,15 @@ The precondition is that
 The post-condition is that 
 
 ###  EnableDiagosticMode  (Spark gold)
-This procedure allows to 
-The precondition is that
-The post-condition is that 
+This procedure allows to enable diagostic mode, a car configuration will not allow the car to do any operation, expect to print car's diagostic information (like battery level, gear inserted, degradation status). 
+The precondition is that DiagnosticMode is Off
+The post-condition is that DiagnosticMode is On
 
 ###  DisableDiagnosticMode  (Spark gold)
 
-This procedure allows to 
-The precondition is that
-The post-condition is that 
+This procedure allows to disable the diagostic mode, allowing so the car'assistante to execute any implemented functionality. 
+The precondition is that DiagnosticMode is On
+The post-condition is that DiagnosticMode is Off
 
 ###  IncreaseSpeed  (Spark gold)
 This procedure allows to increase the speed by 5Km/h and increase the battery degradation level as result of an higher speed.
