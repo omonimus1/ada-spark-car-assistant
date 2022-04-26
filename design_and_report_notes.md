@@ -122,21 +122,48 @@ This procudere allows to set the parking mode, a car configuration needed to ena
 The precondition is that Parking is Off, Car speed is zero (0), and the gear inserted is 0 (also consiered as neutral).
 The post-condition is that Parking is On, Car speed is zero (0), and the gear inserted is 0 (also consiered as neutral).
 
-###  AddPassenger  (Spark gold)
+###  AddPassenger  (Spark gold
+This procedure allows to 
+The precondition is that
+The post-condition is that 
 
 
 ###  RemovePasenger  (Spark gold)
+This procedure allows to 
+The precondition is that
+The post-condition is that 
 
 ###  EnableDiagosticMode  (Spark gold)
+This procedure allows to 
+The precondition is that
+The post-condition is that 
 
 ###  DisableDiagnosticMode  (Spark gold)
 
+This procedure allows to 
+The precondition is that
+The post-condition is that 
 
 ###  IncreaseSpeed  (Spark gold)
+This procedure allows to increase the speed by 5Km/h and increase the battery degradation level as result of an higher speed.
+The precondition is that Engine is On, Parking mode is Off, diagostic Mode is Off, and Gear Inserted is at least 1 (>=1), BatteryLevel is >=5 (above the minimum level), and at least the driver is inside the car (having so N. Passenger >=1). 
+The post-condition is that Engine is On, Parking mode is Off, diagostic Mode is Off,and Gear Inserted is at least 1 (>=1), BatteryLevel is >=5 (above the minimum level), and at least the driver is inside the car (having so N. Passenger >=1). 
+
 
 ###  DecreaseSpeed  (Spark gold)
+This procedure allows to decrease the speed and decrease the battery degradation level as result of a lower speed. The speed will be decreased by 5KM/h.
+The precondition is that Engine is On, Parking mode is Off, diagostic Mode is Off
+The post-condition is that Engine is On, Parking mode is Off, diagostic Mode is Off.
 
 ###  Turn  (Spark gold)
+This procedure allows the car to decide if it is safe to turn or not. 
+The car cannot turn if one of its sensor will detect an object that may interface with driver and passengers safety. 
+If the car is relative slow (under 5), its speed will be increased in order to make a safe and relativly quickly turn. 
+
+The precondition is that the Engine is On, the Gear inserted is at least 1 (>=1), the parking Mode is Off, the DiagosticMode is Off, and that object detection is off. 
+The post-condition is that: Engine is On, the Gear inserted is at least 1 (>=1), the parking Mode is Off, the DiagosticMode is Off, and that object detection is off. 
+
+
 
 
 
