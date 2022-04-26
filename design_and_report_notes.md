@@ -98,6 +98,23 @@ Allows anytime to provide information related to:
 As the battery charge gets exploitded while driving, is necessary to recharge the Tesla car batteries.
 Is possible to recarge the battery when the gear inserted is 0, Engine is off and Car speed is 0. 
 
+----------------------------------------------------------------------
+
+
+## Description of requirements
+
+### TurnEngineOn (Spark gold)
+This procudere allows to turn on the Engine, setting the PowerLevel to On.
+The precondition is that PowerLeve is Off, the post-condition, is that PowerLevel is on.
+
+### TurnEngineoff (Spark gold)
+This procudere allows to turn of the Engine, setting the PowerLevel to Of.
+The precondition is that PowerLeve is On, the post-condition, is that PowerLevel is Off.
+
+###  UnsetParkingMode (Spark gold)
+
+###  SetParkingMode (Spark gold)
+
 
 
 
