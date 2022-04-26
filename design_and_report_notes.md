@@ -108,12 +108,19 @@ This procudere allows to turn on the Engine, setting the PowerLevel to On.
 The precondition is that PowerLeve is Off, the post-condition, is that PowerLevel is on.
 
 ### TurnEngineoff (Spark gold)
-This procudere allows to turn of the Engine, setting the PowerLevel to Of.
-The precondition is that PowerLeve is On, the post-condition, is that PowerLevel is Off.
+This procudere allows to turn of the Engine, setting the PowerLevel to Off, and set the battery degradation metric to zero. 
+The precondition is that PowerLeve is On, the post-condition, is that PowerLevel is Off and BatteryDegradationLevel is 0.
 
 ###  UnsetParkingMode (Spark gold)
+This procudere allows to Unset the parking mode, a car configuration needed to disable the electronic handbranking, and let the driver drive the car. 
+The precondition is that Parking is On, Car speed is zero (0), and the gear inserted is 0 (also consiered as neutral).
+The post-condition is that Parking is Off, Car speed is zero (0), and the gear inserted is 0 (also consiered as neutral).
 
 ###  SetParkingMode (Spark gold)
+
+This procudere allows to set the parking mode, a car configuration needed to enable the electronic handbranking, allowing the car to be safely stationary. 
+The precondition is that Parking is Off, Car speed is zero (0), and the gear inserted is 0 (also consiered as neutral).
+The post-condition is that Parking is On, Car speed is zero (0), and the gear inserted is 0 (also consiered as neutral).
 
 
 
