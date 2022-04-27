@@ -21,7 +21,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV MAX_TASKS=1+
 
-U main%b		main.adb		388042f5 NE OO SU
+U main%b		main.adb		383f6bd6 NE OO SU
 W ada%s			ada.ads			ada.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
@@ -58,7 +58,7 @@ D interfac.ads		20210520051132 edec285f interfaces%s
 D i-c.ads		20210520051132 d9beded9 interfaces.c%s
 D i-cstrin.ads		20210520051132 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D levels.ads		20220427093838 f3d424f7 levels%s
+D levels.ads		20220427095604 f36b0dd4 levels%s
 D main.adb		20220427094538 25f61815 main%b
 D system.ads		20210520051136 2ffa5114 system%s
 D s-atacco.ads		20210520051132 4c36d12f system.address_to_access_conversions%s
@@ -128,7 +128,7 @@ X 14 a-textio.ads
 . 128s13 129s13 130s13 131s13 132s13 133s13 134s13 135s13 136s13 139s13 142s13
 . 143s13
 X 20 levels.ads
-1K9*Levels 117e11 21|1w6 1r18
+1K9*Levels 126e11 21|1w6 1r18
 3n19*On{3E9} 21|32r65 36r66 40r35
 4I9*Battery<short_short_integer>
 5I9*BatteryDegradation<short_short_integer>

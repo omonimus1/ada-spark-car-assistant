@@ -81,5 +81,18 @@ is
        TeslaCar.GearInserted := TeslaCar.GearInserted + 1;
    end Turn;
 
+   procedure GearUp is
+   begin
+      if TeslaCar.CarSpeed = 0 and TeslaCar.GearInserted <=4 then
+         TeslaCar.GearInserted := TeslaCar.GearInserted +1;
+      end if;
+   end GearUp;
+
+   procedure GearDown is
+   begin
+      if TeslaCar.CarSpeed =0 and TeslaCar.GearInserted >= 0 then
+         TeslaCar.GearInserted := TeslaCar.GearInserted - 1;
+      end if;
+   end GearDown;
 
 end Levels;

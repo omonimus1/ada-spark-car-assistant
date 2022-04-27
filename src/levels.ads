@@ -112,6 +112,15 @@ is
      Post => TeslaCar.PowerLevel = On and  TeslaCar.BatteryLevel > 0 and TeslaCar.GearInserted >=1
      and  TeslaCar.NumberOfPassengers >=1 and  TeslaCar.ObjectDetected = Off and  TeslaCar.MaintenanceMode = Off;
 
+   procedure GearUp with
+     Global => (In_Out => TeslaCar),
+     Pre => TeslaCar.CarSpeed = 0 and TeslaCar.GearInserted <=4,
+       Post => TeslaCar.CarSpeed = 0;
+
+   procedure GearDown with
+     Global => (In_Out => TeslaCar),
+       Pre => TeslaCar.CarSpeed = 0 and TeslaCar.GearInserted >=0,
+         Post => TeslaCar.CarSpeed = 0 and TeslaCar.GearInserted >= -1;
 
 
 end Levels;
