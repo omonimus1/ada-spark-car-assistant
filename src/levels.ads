@@ -46,13 +46,13 @@ is
 
    procedure TurnEngineOn with
      Global => (In_Out => TeslaCar),
-     Pre => (TeslaCar.PowerLevel = Off),
+     Pre => (TeslaCar.PowerLevel = Off and TeslaCar.Parking = On),
      Post => TeslaCar.PowerLevel = On;
 
    procedure TurnEngineOff with
      Global => (In_Out => TeslaCar),
      Pre => (TeslaCar.PowerLevel = On),
-     Post => TeslaCar.PowerLevel = Off;
+     Post => TeslaCar.PowerLevel = Off and TeslaCar.Parking = On;
 
    procedure UnsetParkingMode with
      Global => (In_Out => TeslaCar),

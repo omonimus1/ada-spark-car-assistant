@@ -29,9 +29,18 @@ procedure Main is
       Put_Line("M => Print again commands menu");
       Put_Line("Press ANY other key to exit");
       loop
+         if TeslaCar.BatteryLevel < 5 then
+            Put_Line("Battery level is low...Charge the batteries");
+            exit;
+         end if;
+         if TeslaCar.BatteryLevel < 15 then
+            Put_Line("Running low of battery, reach a charge point immeditaly");
+         end if;
+
          if TeslaCar.PowerLevel = On then
             TeslaCar.BatteryLevel := TeslaCar.BatteryLevel - 1; -- Todo: Fix with Battery degradation Level
          end if;
+
          Put_Line("Please enter what you would like to do:");
          Get_Line(Str,Last);
          case Str(1) is
@@ -132,6 +141,7 @@ procedure Main is
             Put("Battery degration Level: ");
             Put_Line(TeslaCar.BatteryDegradationLevel'Image);
             Put_Line("Mind that degration level may change in according to car load and speed");
+
          when others => exit;
          end case;
       end loop;

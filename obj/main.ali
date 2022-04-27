@@ -20,7 +20,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV MAX_TASKS=1+
 
-U main%b		main.adb		02881c9d NE OO SU
+U main%b		main.adb		bfef682e NE OO SU
 W ada%s			ada.ads			ada.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
@@ -57,8 +57,8 @@ D interfac.ads		20210520051132 edec285f interfaces%s
 D i-c.ads		20210520051132 d9beded9 interfaces.c%s
 D i-cstrin.ads		20210520051132 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D levels.ads		20220423232800 983e7334 levels%s
-D main.adb		20220424181126 741411be main%b
+D levels.ads		20220427093838 f3d424f7 levels%s
+D main.adb		20220427094408 a29932ce main%b
 D system.ads		20210520051136 2ffa5114 system%s
 D s-atacco.ads		20210520051132 4c36d12f system.address_to_access_conversions%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
@@ -113,53 +113,54 @@ X 7 a-nuflra.ads
 41K22*Float_Random 74e30 21|3w19 3r50
 47R9*Generator<38|65R9> 21|9r10
 49F12*Uniformly_Distributed{float}
-51V13*Random{49F12}<38|73p13> 21|92s18
+51V13*Random{49F12}<38|73p13> 21|101s18
 X 14 a-textio.ads
 58K13*Text_IO 725e16 21|2w10 2r27
-463U14*Put 21|100s13 106s13 129s13 132s13
-479U14*Get_Line 21|36s10
+463U14*Put 21|109s13 115s13 138s13 141s13
+479U14*Get_Line 21|45s10
 506U14*Put_Line 21|13s7 14s7 15s7 16s7 17s7 18s7 19s7 20s7 21s7 22s7 23s7
-. 24s7 25s7 26s7 27s7 28s7 29s7 30s7 35s10 39s13 41s13 42s13 44s13 46s13
-. 47s13 49s13 51s13 52s13 54s13 56s13 57s13 59s13 60s13 61s13 63s13 64s13
-. 65s13 66s13 67s13 68s13 70s13 71s13 72s13 74s13 75s13 76s13 77s13 78s13
-. 79s13 81s13 83s13 84s13 86s13 88s13 89s13 91s13 93s13 97s13 101s13 107s16
-. 110s13 111s13 112s13 113s13 114s13 115s13 116s13 117s13 118s13 119s13 120s13
-. 121s13 122s13 123s13 124s13 125s13 126s13 127s13 130s13 133s13 134s13
+. 24s7 25s7 26s7 27s7 28s7 29s7 30s7 33s13 37s13 44s10 48s13 50s13 51s13
+. 53s13 55s13 56s13 58s13 60s13 61s13 63s13 65s13 66s13 68s13 69s13 70s13
+. 72s13 73s13 74s13 75s13 76s13 77s13 79s13 80s13 81s13 83s13 84s13 85s13
+. 86s13 87s13 88s13 90s13 92s13 93s13 95s13 97s13 98s13 100s13 102s13 106s13
+. 110s13 116s16 119s13 120s13 121s13 122s13 123s13 124s13 125s13 126s13 127s13
+. 128s13 129s13 130s13 131s13 132s13 133s13 134s13 135s13 136s13 139s13 142s13
+. 143s13
 X 20 levels.ads
 1K9*Levels 117e11 21|1w6 1r18
-3n19*On{3E9} 21|32r35
+3n19*On{3E9} 21|40r35
 4I9*Battery<short_short_integer>
 5I9*BatteryDegradation<short_short_integer>
 6I9*Speed<short_short_integer>
 8I9*Passengers<short_short_integer>
-13n25*On{13E9} 21|102r35
-16e7*PowerLevel{3E9} 21|32r22 42r31 47r31
-17i7*BatteryLevel{4I9} 21|33m22 33r47 68r31 79r31 130r31
-18i7*BatteryDegradationLevel{5I9} 21|66r31 77r31 133r31
-19i7*CarSpeed{6I9} 21|61r31 64r31 72r31 75r31
-21e7*MaintenanceMode{7E9} 21|84r31 89r31
-22i7*NumberOfPassengers{8I9} 21|52r31 57r31
-25e7*Parking{13E9} 21|101r31 102r25 107r34
-36r4*TeslaCar{15R9} 21|32r13 33m13 33r38 42r22 47r22 52r22 57r22 61r22 64r22
-. 66r22 68r22 72r22 75r22 77r22 79r22 84r22 89r22 101r22 102r16 107r25 130r22
-. 133r22
-47U14*TurnEngineOn 21|40s13
-52U14*TurnEngineOff 21|45s13
-57U14*UnsetParkingMode 21|103s16
-62U14*SetParkingMode 21|105s16
-67U14*AddPassenger 21|50s13
-72U14*RemovePassenger 21|55s13
-77U14*EnableDiagosticMode 21|82s13
-82U14*DisableDiagosticMode 21|87s13
-95U14*IncreaseSpeed 21|62s13
-103U14*DecreaseSpeed 21|73s13
+13n25*On{13E9} 21|111r35
+16e7*PowerLevel{3E9} 21|40r22 51r31 56r31
+17i7*BatteryLevel{4I9} 21|32r22 36r22 41m22 41r47 77r31 88r31 139r31
+18i7*BatteryDegradationLevel{5I9} 21|75r31 86r31 142r31
+19i7*CarSpeed{6I9} 21|70r31 73r31 81r31 84r31
+21e7*MaintenanceMode{7E9} 21|93r31 98r31
+22i7*NumberOfPassengers{8I9} 21|61r31 66r31
+25e7*Parking{13E9} 21|110r31 111r25 116r34
+36r4*TeslaCar{15R9} 21|32r13 36r13 40r13 41m13 41r38 51r22 56r22 61r22 66r22
+. 70r22 73r22 75r22 77r22 81r22 84r22 86r22 88r22 93r22 98r22 110r22 111r16
+. 116r25 139r22 142r22
+47U14*TurnEngineOn 21|49s13
+52U14*TurnEngineOff 21|54s13
+57U14*UnsetParkingMode 21|112s16
+62U14*SetParkingMode 21|114s16
+67U14*AddPassenger 21|59s13
+72U14*RemovePassenger 21|64s13
+77U14*EnableDiagosticMode 21|91s13
+82U14*DisableDiagosticMode 21|96s13
+95U14*IncreaseSpeed 21|71s13
+103U14*DecreaseSpeed 21|82s13
 X 21 main.adb
-5U11*Main 5b11 144l5 144t9
-6a4 Str{string} 36m19 37r15
-7i4 Last{natural} 36m23
-8t9 Start 11b14 139l8 139t13
-9r4 RNG{7|47R9} 92r25
-10f4 X{float} 92m13 93r22
+5U11*Main 5b11 154l5 154t9
+6a4 Str{string} 45m19 46r15
+7i4 Last{natural} 45m23
+8t9 Start 11b14 149l8 149t13
+9r4 RNG{7|47R9} 101r25
+10f4 X{float} 101m13 102r22
 X 42 s-stausa.ads
 208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
 273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22

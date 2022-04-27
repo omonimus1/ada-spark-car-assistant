@@ -2,7 +2,7 @@ package body Levels with SPARK_Mode
 
 is
    procedure TurnEngineOn is begin
-      if TeslaCar.PowerLevel = Off then
+      if TeslaCar.PowerLevel = Off and TeslaCar.Parking=On then
          TeslaCar.PowerLevel := On;
          TeslaCar.BatteryDegradationLevel := TeslaCar.BatteryDegradationLevel +1;
       end if;
@@ -13,6 +13,7 @@ is
       if TeslaCar.PowerLevel = On then
          TeslaCar.PowerLevel :=  Off;
          TeslaCar.BatteryDegradationLevel := 0;
+         TeslaCar.Parking := Off;
       end if;
       end TurnEngineOff;
 
