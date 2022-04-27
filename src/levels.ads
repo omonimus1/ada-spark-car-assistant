@@ -46,8 +46,8 @@ is
 
    procedure TurnEngineOn with
      Global => (In_Out => TeslaCar),
-     Pre => (TeslaCar.PowerLevel = Off and TeslaCar.Parking = On),
-     Post => TeslaCar.PowerLevel = On;
+     Pre => (TeslaCar.PowerLevel = Off and TeslaCar.Parking = On and TeslaCar.MaintenanceMode = Off),
+     Post => TeslaCar.PowerLevel = On and TeslaCar.MaintenanceMode = Off;
 
    procedure TurnEngineOff with
      Global => (In_Out => TeslaCar),
@@ -94,16 +94,16 @@ is
 
    procedure IncreaseSpeed with
      Global => (In_Out => TeslaCar),
-     Pre => InvariantAcceleration,
-     Post => InvariantAcceleration and  TeslaCar.GearInserted > 0;
+     Pre => InvariantAcceleration and TeslaCar.MaintenanceMode = Off,
+     Post => InvariantAcceleration and  TeslaCar.GearInserted > 0 and TeslaCar.MaintenanceMode = Off;
 
    function InvariantDeceleration return Boolean is
       (TeslaCar.MaintenanceMode = Off);
 
    procedure DecreaseSpeed with
      Global => (In_Out => TeslaCar),
-     Pre => TeslaCar.Parking = Off,
-     Post => TeslaCar.Parking = Off;
+     Pre => TeslaCar.Parking = Off and TeslaCar.MaintenanceMode = Off,
+     Post => TeslaCar.Parking = Off and TeslaCar.MaintenanceMode = Off;
 
    procedure Turn with
      Global => (In_Out => TeslaCar),
@@ -114,13 +114,13 @@ is
 
    procedure GearUp with
      Global => (In_Out => TeslaCar),
-     Pre => TeslaCar.CarSpeed = 0 and TeslaCar.GearInserted <=4,
-       Post => TeslaCar.CarSpeed = 0;
+     Pre => TeslaCar.CarSpeed = 0 and TeslaCar.GearInserted <=4 and TeslaCar.MaintenanceMode = Off,
+       Post => TeslaCar.CarSpeed = 0 and TeslaCar.GearInserted <=5 and TeslaCar.MaintenanceMode = Off;
 
    procedure GearDown with
      Global => (In_Out => TeslaCar),
-       Pre => TeslaCar.CarSpeed = 0 and TeslaCar.GearInserted >=0,
-         Post => TeslaCar.CarSpeed = 0 and TeslaCar.GearInserted >= -1;
+       Pre => TeslaCar.CarSpeed = 0 and TeslaCar.GearInserted >=0 and TeslaCar.MaintenanceMode = Off,
+         Post => TeslaCar.CarSpeed = 0 and TeslaCar.GearInserted >= -1 and TeslaCar.MaintenanceMode = Off;
 
 
 end Levels;

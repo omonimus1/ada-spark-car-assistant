@@ -10,7 +10,7 @@ is
 
 
    procedure TurnEngineOff is begin
-      if TeslaCar.PowerLevel = On then
+      if TeslaCar.PowerLevel = On and TeslaCar.MaintenanceMode = Off then
          TeslaCar.PowerLevel :=  Off;
          TeslaCar.BatteryDegradationLevel := 0;
          TeslaCar.Parking := Off;
@@ -18,21 +18,21 @@ is
       end TurnEngineOff;
 
    procedure SetParkingMode is begin
-      if TeslaCar.CarSpeed = 0
+      if TeslaCar.CarSpeed = 0 and TeslaCar.MaintenanceMode = Off
          and TeslaCar.Parking = Off and TeslaCar.GearInserted = 0 then
             TeslaCar.Parking := On;
       end if;
          end SetParkingMode;
 
    procedure UnsetParkingMode is begin
-            if TeslaCar.CarSpeed = 0
+            if TeslaCar.CarSpeed = 0 and TeslaCar.MaintenanceMode = Off
               and TeslaCar.Parking = On and TeslaCar.GearInserted = 0 then
                TeslaCar.Parking := Off;
       end if;
       end UnsetParkingMode;
 
    procedure AddPassenger is begin
-       if TeslaCar.NumberOfPassengers >=0
+       if TeslaCar.NumberOfPassengers >=0 and TeslaCar.MaintenanceMode = Off
           and TeslaCar.NumberOfPassengers <= 5
           and TeslaCar.CarSpeed = 0 then
             TeslaCar.NumberOfPassengers := TeslaCar.NumberOfPassengers + 1;
@@ -41,7 +41,7 @@ is
    end AddPassenger;
 
    procedure RemovePassenger is begin
-               if TeslaCar.NumberOfPassengers >=1 and TeslaCar.NumberOfPassengers <= 5 and TeslaCar.CarSpeed = 0 then
+               if TeslaCar.NumberOfPassengers >=1 and TeslaCar.MaintenanceMode = Off and TeslaCar.NumberOfPassengers <= 5 and TeslaCar.CarSpeed = 0 then
                   TeslaCar.BatteryDegradationLevel := TeslaCar.BatteryDegradationLevel -1;
       end if;
    end RemovePassenger;
@@ -68,29 +68,35 @@ is
 
 
    procedure DecreaseSpeed is begin
+    if TeslaCar.MaintenanceMode = Off then
       TeslaCar.CarSpeed := TeslaCar.CarSpeed -5;
       TeslaCar.GearInserted := TeslaCar.GearInserted -1;
       TeslaCar.BatteryDegradationLevel := TeslaCar.BatteryDegradationLevel -1;
-   end DecreaseSpeed;
+   end if;
+      end DecreaseSpeed;
 
 
    procedure Turn is
    begin
+      if TeslaCar.PowerLevel = On and TeslaCar.MaintenanceMode = Off
+      and TeslaCar.ObjectDetected = Off
+      then
        TeslaCar.CarSpeed := TeslaCar.CarSpeed +5;
        TeslaCar.BatteryDegradationLevel := TeslaCar.BatteryDegradationLevel + 1;
        TeslaCar.GearInserted := TeslaCar.GearInserted + 1;
-   end Turn;
+   end if;
+      end Turn;
 
    procedure GearUp is
    begin
-      if TeslaCar.CarSpeed = 0 and TeslaCar.GearInserted <=4 then
+      if TeslaCar.CarSpeed = 0 and TeslaCar.MaintenanceMode = Off and TeslaCar.GearInserted <=4 then
          TeslaCar.GearInserted := TeslaCar.GearInserted +1;
       end if;
    end GearUp;
 
    procedure GearDown is
    begin
-      if TeslaCar.CarSpeed =0 and TeslaCar.GearInserted >= 0 then
+      if TeslaCar.CarSpeed =0 and TeslaCar.MaintenanceMode = Off and TeslaCar.GearInserted >= 0 then
          TeslaCar.GearInserted := TeslaCar.GearInserted - 1;
       end if;
    end GearDown;
