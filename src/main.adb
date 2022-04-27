@@ -29,11 +29,11 @@ procedure Main is
       Put_Line("M => Print again commands menu");
       Put_Line("Press ANY other key to exit");
       loop
-         if TeslaCar.BatteryLevel < 5 then
+         if TeslaCar.BatteryLevel < 5 and TeslaCar.PowerLevel = On then
             Put_Line("Battery level is low...Charge the batteries");
             exit;
          end if;
-         if TeslaCar.BatteryLevel < 15 then
+         if TeslaCar.BatteryLevel < 15 and TeslaCar.PowerLevel = On then
             Put_Line("Running low of battery, reach a charge point immeditaly");
          end if;
 

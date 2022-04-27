@@ -7,6 +7,7 @@ P ZX
 
 RN
 RV NO_DELAY
+RV NO_DIRECT_BOOLEAN_OPERATORS
 RV NO_ENUMERATION_MAPS
 RV NO_FIXED_POINT
 RV NO_FLOATING_POINT
@@ -20,7 +21,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV MAX_TASKS=1+
 
-U main%b		main.adb		bfef682e NE OO SU
+U main%b		main.adb		388042f5 NE OO SU
 W ada%s			ada.ads			ada.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
@@ -58,7 +59,7 @@ D i-c.ads		20210520051132 d9beded9 interfaces.c%s
 D i-cstrin.ads		20210520051132 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
 D levels.ads		20220427093838 f3d424f7 levels%s
-D main.adb		20220427094408 a29932ce main%b
+D main.adb		20220427094538 25f61815 main%b
 D system.ads		20210520051136 2ffa5114 system%s
 D s-atacco.ads		20210520051132 4c36d12f system.address_to_access_conversions%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
@@ -128,22 +129,22 @@ X 14 a-textio.ads
 . 143s13
 X 20 levels.ads
 1K9*Levels 117e11 21|1w6 1r18
-3n19*On{3E9} 21|40r35
+3n19*On{3E9} 21|32r65 36r66 40r35
 4I9*Battery<short_short_integer>
 5I9*BatteryDegradation<short_short_integer>
 6I9*Speed<short_short_integer>
 8I9*Passengers<short_short_integer>
 13n25*On{13E9} 21|111r35
-16e7*PowerLevel{3E9} 21|40r22 51r31 56r31
+16e7*PowerLevel{3E9} 21|32r52 36r53 40r22 51r31 56r31
 17i7*BatteryLevel{4I9} 21|32r22 36r22 41m22 41r47 77r31 88r31 139r31
 18i7*BatteryDegradationLevel{5I9} 21|75r31 86r31 142r31
 19i7*CarSpeed{6I9} 21|70r31 73r31 81r31 84r31
 21e7*MaintenanceMode{7E9} 21|93r31 98r31
 22i7*NumberOfPassengers{8I9} 21|61r31 66r31
 25e7*Parking{13E9} 21|110r31 111r25 116r34
-36r4*TeslaCar{15R9} 21|32r13 36r13 40r13 41m13 41r38 51r22 56r22 61r22 66r22
-. 70r22 73r22 75r22 77r22 81r22 84r22 86r22 88r22 93r22 98r22 110r22 111r16
-. 116r25 139r22 142r22
+36r4*TeslaCar{15R9} 21|32r13 32r43 36r13 36r44 40r13 41m13 41r38 51r22 56r22
+. 61r22 66r22 70r22 73r22 75r22 77r22 81r22 84r22 86r22 88r22 93r22 98r22
+. 110r22 111r16 116r25 139r22 142r22
 47U14*TurnEngineOn 21|49s13
 52U14*TurnEngineOff 21|54s13
 57U14*UnsetParkingMode 21|112s16
