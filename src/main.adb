@@ -26,7 +26,10 @@ procedure Main is
       Put_Line("P => Enable / Disable Parking Mode");
       Put_Line("R => Turn Right ");
       Put_Line("L => Turn Left");
+      Put_Line("I => Get Car Diagostic information");
       Put_Line("M => Print again commands menu");
+      Put_Line("C => Charge Car");
+      Put_Line("S => Stop charging");
       Put_Line("Press ANY other key to exit");
       loop
          if TeslaCar.BatteryLevel < 5 and TeslaCar.PowerLevel = On then
@@ -65,16 +68,20 @@ procedure Main is
             Put_Line("Number of passenger inside the car:");
             Put_Line(TeslaCar.NumberOfPassengers'Image);
          when '5' =>
-            Put_Line("Check roads contidition before speeding up...");
-            Put_Line("Current speed: ");
-            Put_Line(TeslaCar.CarSpeed'Image);
-            IncreaseSpeed;
-            Put_Line("Current speed: ");
-            Put_Line(TeslaCar.CarSpeed'Image);
-            Put_Line("Battery Degradation level: ");
-            Put_Line(TeslaCar.BatteryDegradationLevel'Image);
-            Put_Line("Battery left: ");
-            Put_Line(TeslaCar.BatteryLevel'Image);
+            if TeslaCar.PowerLevel = Off then
+               Put_Line("Turn the engine before to move off");
+            else 
+               Put_Line("Check roads contidition before speeding up...");
+               Put_Line("Current speed: ");
+               Put_Line(TeslaCar.CarSpeed'Image);
+               IncreaseSpeed;
+               Put_Line("Current speed: ");
+               Put_Line(TeslaCar.CarSpeed'Image);
+               Put_Line("Battery Degradation level: ");
+               Put_Line(TeslaCar.BatteryDegradationLevel'Image);
+               Put_Line("Battery left: ");
+               Put_Line(TeslaCar.BatteryLevel'Image);
+               end if;
          when '6' =>
             Put_Line("Check traffic conditions to slow down...");
             Put_Line("Current speed: ");
@@ -85,7 +92,7 @@ procedure Main is
             Put_Line("Battery Degradation level: ");
             Put_Line(TeslaCar.BatteryDegradationLevel'Image);
             Put_Line("Battery left: ");
-            Put_Line(TeslaCar.BatteryLevel'Image);
+               Put_Line(TeslaCar.BatteryLevel'Image);
          when '7' =>
             Put_Line("Enabling diagnostic mode... ");
             EnableDiagosticMode;
@@ -141,7 +148,25 @@ procedure Main is
             Put("Battery degration Level: ");
             Put_Line(TeslaCar.BatteryDegradationLevel'Image);
             Put_Line("Mind that degration level may change in according to car load and speed");
-
+         when 'I' =>
+            Put("Engine status: ");
+            Put_Line(TeslaCar.PowerLevel'Image);
+            Put("Battery percentage level: ");
+            Put_Line(TeslaCar.BatteryLevel'Image);
+            Put("Parking inserted: ");
+            Put_Line(TeslaCar.Parking'Image);
+            Put("Maintenance status: ");
+            Put_Line(TeslaCar.MaintenanceMode'Image);
+            Put("Car Sspeed: ");
+            Put_Line(TeslaCar.CarSpeed'Image);
+            Put("Minimum battery charge allwed: ");
+            Put_Line(TeslaCar.MinimumBattery'Image);
+         when 'C' =>
+            if TeslaCar.Charging = Off and TeslaCar.CarSpeed = 0 then
+               EnableChargeBattery;
+            end if;
+         when 'S' =>
+            DisableChargeBattery;
          when others => exit;
          end case;
       end loop;
