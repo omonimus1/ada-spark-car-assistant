@@ -72,7 +72,7 @@ is
    procedure RemovePassenger with
      Global => (In_Out => TeslaCar),
      Pre => TeslaCar.NumberOfPassengers >= 1 and TeslaCar.NumberOfPassengers <= 5 and TeslaCar.CarSpeed = 0,
-     Post => TeslaCar.NumberOfPassengers >=1 and TeslaCar.NumberOfPassengers <=5;
+     Post => TeslaCar.NumberOfPassengers >=0 and TeslaCar.NumberOfPassengers <=5 and TeslaCar.CarSpeed=0;
 
    procedure EnableDiagosticMode with
      Global => (In_Out => TeslaCar),
