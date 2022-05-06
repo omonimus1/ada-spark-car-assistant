@@ -3,11 +3,11 @@ package body Levels with SPARK_Mode
 is
    procedure TurnEngineOn is begin
       if TeslaCar.PowerLevel = Off and TeslaCar.Parking=On
-      and TeslaCar.MaintenanceMode = Off then 
+      and TeslaCar.MaintenanceMode = Off then
          TeslaCar.PowerLevel := On;
          if TeslaCar.BatteryDegradationLevel >=0 and TeslaCar.BatteryDegradationLevel <=100 then
             TeslaCar.BatteryDegradationLevel := TeslaCar.BatteryDegradationLevel +1;
-         end if; 
+         end if;
       end if;
    end TurnEngineOn;
 
@@ -16,7 +16,6 @@ is
       if TeslaCar.PowerLevel = On then
          TeslaCar.PowerLevel :=  Off;
          TeslaCar.BatteryDegradationLevel := 0;
-         TeslaCar.Parking := Off;
       end if;
       end TurnEngineOff;
 
@@ -45,7 +44,8 @@ is
 
    procedure RemovePassenger is begin
                if TeslaCar.NumberOfPassengers >=1 and TeslaCar.MaintenanceMode = Off and TeslaCar.CarSpeed = 0 then
-                  TeslaCar.BatteryDegradationLevel := TeslaCar.BatteryDegradationLevel -1;
+         TeslaCar.BatteryDegradationLevel := TeslaCar.BatteryDegradationLevel -1;
+         TeslaCar.NumberOfPassengers := TeslaCar.NumberOfPassengers -1;
       end if;
    end RemovePassenger;
 
@@ -103,13 +103,13 @@ is
          TeslaCar.GearInserted := TeslaCar.GearInserted - 1;
       end if;
    end GearDown;
-   
+
    procedure EnableChargeBattery is begin
          if TeslaCar.CarSpeed = 0 and TeslaCar.Parking=On and  TeslaCar.PowerLevel = Off and TeslaCar.Charging =Off then
             TeslaCar.Charging := On;
          end if;
    end EnableChargeBattery;
-   
+
    procedure DisableChargeBattery is begin
       if TeslaCar.CarSpeed = 0 and TeslaCar.PowerLevel = Off and TeslaCar.Charging = On then
          TeslaCar.Charging := Off;
