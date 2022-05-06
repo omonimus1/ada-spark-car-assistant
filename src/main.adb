@@ -5,7 +5,7 @@ with Ada.Numerics.Float_Random; use Ada.Numerics.Float_Random;
 procedure Main is
    Str : String(1..2);
    Last : Natural;
-   task Start;
+    task Start;
    RNG : Generator;
    X : Float;
    task body Start is
@@ -70,27 +70,27 @@ procedure Main is
          when '5' =>
             if TeslaCar.PowerLevel = Off then
                Put_Line("Turn the engine before to move off");
-            else 
+            else
                Put_Line("Check roads contidition before speeding up...");
-               Put_Line("Current speed: ");
+               Put("Current speed: ");
                Put_Line(TeslaCar.CarSpeed'Image);
                IncreaseSpeed;
-               Put_Line("Current speed: ");
+               Put("New speed: ");
                Put_Line(TeslaCar.CarSpeed'Image);
-               Put_Line("Battery Degradation level: ");
+               Put("Battery Degradation level: ");
                Put_Line(TeslaCar.BatteryDegradationLevel'Image);
-               Put_Line("Battery left: ");
+               Put("Battery left: ");
                Put_Line(TeslaCar.BatteryLevel'Image);
                end if;
          when '6' =>
             Put_Line("Check traffic conditions to slow down...");
-            Put_Line("Current speed: ");
+            Put("Current speed: ");
             Put_Line(TeslaCar.CarSpeed'Image);
             DecreaseSpeed;
-            Put_Line("Current speed: ");
+            Put("Current speed: ");
             Put_Line(TeslaCar.CarSpeed'Image);
             Put_Line("Battery Degradation level: ");
-            Put_Line(TeslaCar.BatteryDegradationLevel'Image);
+            Put(TeslaCar.BatteryDegradationLevel'Image);
             Put_Line("Battery left: ");
                Put_Line(TeslaCar.BatteryLevel'Image);
          when '7' =>
@@ -123,24 +123,26 @@ procedure Main is
                Put_Line(TeslaCar.Parking'Image);
             end if;
          when 'M' =>
-            Put_Line("Welcome to your Tesla Management system!");
-            Put_Line("Tesla managemnt menu: ");
-            Put_Line("Command => Description");
-            Put_Line("1 => Turn On Engine");
-            Put_Line("2 => Turn off Engine");
-            Put_Line("3 => Load Passenger");
-            Put_Line("4 => Unload Passengers");
-            Put_Line("5 => Speed up ");
-            Put_Line("6 => Slow Down");
-            Put_line("7 => Enable Maintenance Mode");
-            Put_Line("8 => Disable Maintenance Mode");
-            Put_Line("B => Get Battery status");
-            Put_Line("D => Get Battery decration Level");
-            Put_Line("P => Enable / Disable Parking Mode");
-            Put_Line("R => Turn Right ");
-            Put_Line("L => Turn Left");
-            Put_Line("M => Print again commands menu");
-            Put_Line("Press ANY other key to exit");
+             Put_Line("Tesla managemnt menu: ");
+             Put_Line("Command => Description");
+             Put_Line("1 => Turn On Engine");
+             Put_Line("2 => Turn off Engine");
+             Put_Line("3 => Load Passenger");
+              Put_Line("4 => Unload Passengers");
+      Put_Line("5 => Speed up ");
+      Put_Line("6 => Slow Down");
+      Put_line("7 => Enable Maintenance Mode");
+      Put_Line("8 => Disable Maintenance Mode");
+      Put_Line("B => Get Battery status");
+      Put_Line("D => Get Battery decration Level");
+      Put_Line("P => Enable / Disable Parking Mode");
+      Put_Line("R => Turn Right ");
+      Put_Line("L => Turn Left");
+      Put_Line("I => Get Car Diagostic information");
+      Put_Line("M => Print again commands menu");
+      Put_Line("C => Charge Car");
+      Put_Line("S => Stop charging");
+      Put_Line("Press ANY other key to exit");
          when 'B' =>
             Put("Battery level: ");
             Put_Line(TeslaCar.BatteryLevel'Image);
@@ -164,9 +166,13 @@ procedure Main is
          when 'C' =>
             if TeslaCar.Charging = Off and TeslaCar.CarSpeed = 0 then
                EnableChargeBattery;
+               Put("Charging status: ");
+               Put_Line(TeslaCar.Charging'Image);
             end if;
          when 'S' =>
             DisableChargeBattery;
+            Put("Charging status: ");
+            Put_Line(TeslaCar.Charging'Image);
          when others => exit;
          end case;
       end loop;
