@@ -55,7 +55,7 @@ is
              TeslaCar.GearInserted=0 and
              TeslaCar.Parking = On and
              TeslaCar.MaintenanceMode = Off),
-     
+
      Post => TeslaCar.PowerLevel = On and
      TeslaCar.GearInserted=0 and
      TeslaCar.BatteryDegradationLevel >=0 and
@@ -84,7 +84,7 @@ is
      TeslaCar.CarSpeed = 0 and
      TeslaCar.BatteryDegradationLevel >=0 and
      TeslaCar.BatteryDegradationLevel <=99,
-     Post => 
+     Post =>
      TeslaCar.BatteryDegradationLevel >=0 and
      TeslaCar.BatteryDegradationLevel <=100;
 
@@ -120,7 +120,7 @@ is
      TeslaCar.GearInserted >=-1 and TeslaCar.GearInserted <= 4,
      Post => InvariantAcceleration and
      TeslaCar.BatteryDegradationLevel > 0 and TeslaCar.BatteryDegradationLevel <=100 and
-     TeslaCar.GearInserted <=5 and 
+     TeslaCar.GearInserted <=5 and
      TeslaCar.MaintenanceMode = Off;
 
    function InvariantDeceleration return Boolean is
@@ -142,7 +142,7 @@ is
      TeslaCar.ObjectDetected = Off and
      TeslaCar.CarSpeed >=0 and TeslaCar.CarSpeed <= 195 and
      TeslaCar.MaintenanceMode = Off and
-     TeslaCar.BatteryDegradationLevel >= 0 and TeslaCar.BatteryDegradationLevel <= 99 and 
+     TeslaCar.BatteryDegradationLevel >= 0 and TeslaCar.BatteryDegradationLevel <= 99 and
      TeslaCar.GearInserted >=0 and TeslaCar.GearInserted <=4,
      Post => TeslaCar.PowerLevel = On and  TeslaCar.BatteryLevel > 0 and TeslaCar.GearInserted >=1
      and  TeslaCar.NumberOfPassengers >=1 and
@@ -165,7 +165,7 @@ is
      Global => (In_Out => TeslaCar),
      Pre => TeslaCar.CarSpeed = 0 and TeslaCar.PowerLevel = Off and TeslaCar.Charging = Off and TeslaCar.Parking=On,
      Post => TeslaCar.CarSpeed = 0 and TeslaCar.PowerLevel = Off and TeslaCar.Charging = On and TeslaCar.Parking = On;
-   
+
    procedure DisableChargeBattery with
      Global => (In_Out => TeslaCar),
      Pre => TeslaCar.CarSpeed = 0 and TeslaCar.PowerLevel = Off and TeslaCar.Charging = On,
